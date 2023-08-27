@@ -5,12 +5,14 @@ source ./utils/detection/linux_dist_detect.sh
 source ./utils/preparing/prepare_ubuntu.sh
 source ./utils/preparing/prepare_debian.sh
 source ./utils/preparing/prepare_centos.sh
+source ./utils/preparing/prepare_centos.sh
+source ./constants/colors.sh
 
 OS_TYPE=$(os_detect)
 
 if [[ $OS_TYPE != "Linux" ]];
   then
-    echo "Error! Your current OS is ${OS_TYPE}. This utill works only with Linux"
+    echo -e "${RED}Error! Your current OS is ${OS_TYPE}. This utill works only with Linux${NC}"
     exit 1
 fi
 
@@ -24,7 +26,7 @@ IS_CENTOS=$(expr "$LINUX_DIST_NAME" = "centos")
 
 if [[ $IS_UBUNTU == 0 && $IS_DEBIAN && $IS_CENTOS == 0 ]];
   then
-    echo "Error! Your current dist is ${LINUX_DIST_NAME}. This utill works only with Ubuntu/Debian/CentOS"
+    echo -e "${RED}Error! Your current dist is ${LINUX_DIST_NAME}. This utill works only with Ubuntu/Debian/CentOS${NC}"
     exit 1
 fi
 
