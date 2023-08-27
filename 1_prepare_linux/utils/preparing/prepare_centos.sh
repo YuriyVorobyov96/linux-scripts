@@ -15,15 +15,16 @@ function prepare_centos {
   sudo firewall-cmd --permanent --add-service=https
   sudo firewall-cmd --reload
   sudo systemctl start httpd
+  sudo systemctl enable httpd
   check_is_apache_running
 
   sudo apt install python3
   check_is_python_running
 
   sudo yum install openssh-server openssh-clients –y
-  sudo systemctl start sshd
-  sudo systemctl enable sshd
   sudo firewall-cmd --permanent --add-service=ssh
   sudo firewall-cmd --reload
+  sudo systemctl start sshd
+  sudo systemctl enable sshd
   check_is_ssh_server_running
 }
