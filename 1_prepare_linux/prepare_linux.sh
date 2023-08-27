@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./utils/detection/osdetect.sh
+source ./utils/detection/os_detect.sh
 source ./utils/detection/linux_dist_detect.sh
 source ./utils/preparing/prepare_ubuntu.sh
 source ./utils/preparing/prepare_debian.sh
