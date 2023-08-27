@@ -1,8 +1,10 @@
 #!/bin/bash
 
-source ./checking/check_httpd.sh
-source ./checking/check_python.sh
-source ./checking/check_ssh.sh
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+source "$DIR/../checking/check_httpd.sh"
+source "$DIR/../checking/check_python.sh"
+source "$DIR/../checking/check_ssh.sh"
 
 function prepare_centos {
   sudo yum update -y

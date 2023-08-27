@@ -1,8 +1,10 @@
 #!/bin/bash
 
-source ./checking/check_apache2.sh
-source ./checking/check_python.sh
-source ./checking/check_ssh.sh
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+source "$DIR/../checking/check_apache2.sh"
+source "$DIR/../checking/check_python.sh"
+source "$DIR/../checking/check_ssh.sh"
 
 function prepare_debian {
   echo "deb http://deb.debian.org/debian buster-backports main contrib non-free" | sudo tee -a /etc/apt/sources.list.d/backports.list
