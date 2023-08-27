@@ -7,7 +7,7 @@ source "$DIR/../checking/check_python.sh"
 source "$DIR/../checking/check_ssh.sh"
 
 function prepare_debian {
-  echo "deb http://deb.debian.org/debian buster-backports main contrib non-free" | sudo tee -a /etc/apt/sources.list.d/backports.list
+  yes | echo "deb http://deb.debian.org/debian buster-backports main contrib non-free" | sudo tee -a /etc/apt/sources.list.d/backports.list
   sudo apt-get update -y
 
   sudo apt install apache2 -y
