@@ -1,10 +1,8 @@
 #!/bin/bash
 
-DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-
-source "$DIR/../checking/check_httpd.sh"
-source "$DIR/../checking/check_python.sh"
-source "$DIR/../checking/check_ssh.sh"
+source /scripts/prepare_linux/utils/checking/check_httpd.sh
+source /scripts/prepare_linux/utils/checking/check_python.sh
+source /scripts/prepare_linux/utils/checking/check_ssh.sh
 
 function prepare_centos {
   sudo yum update -y

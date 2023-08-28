@@ -1,12 +1,12 @@
 #!/bin/bash
 
-source ./utils/detection/os_detect.sh
-source ./utils/detection/linux_dist_detect.sh
-source ./utils/preparing/prepare_ubuntu.sh
-source ./utils/preparing/prepare_debian.sh
-source ./utils/preparing/prepare_centos.sh
-source ./utils/preparing/prepare_centos.sh
-source ./constants/colors.sh
+source /scripts/prepare_linux/utils/detection/os_detect.sh
+source /scripts/prepare_linux/utils/detection/linux_dist_detect.sh
+source /scripts/prepare_linux/utils/preparing/prepare_ubuntu.sh
+source /scripts/prepare_linux/utils/preparing/prepare_debian.sh
+source /scripts/prepare_linux/utils/preparing/prepare_centos.sh
+source /scripts/prepare_linux/utils/preparing/prepare_centos.sh
+source /scripts/prepare_linux/constants/colors.sh
 
 OS_TYPE=$(os_detect)
 

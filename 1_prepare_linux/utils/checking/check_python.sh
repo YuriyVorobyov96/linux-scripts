@@ -2,7 +2,7 @@
 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
-source "$DIR/../../constants/colors.sh"
+source /scripts/prepare_linux/constants/colors.sh
 
 function check_is_python_running {
   if [[ "$(python3 -V)" =~ "Python 3" ]];

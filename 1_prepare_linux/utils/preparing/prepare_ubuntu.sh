@@ -1,10 +1,8 @@
 #!/bin/bash
 
-DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-
-source "$DIR/../checking/check_apache2.sh"
-source "$DIR/../checking/check_python.sh"
-source "$DIR/../checking/check_ssh.sh"
+source /scripts/prepare_linux/utils/checking/check_apache2.sh
+source /scripts/prepare_linux/utils/checking/check_python.sh
+source /scripts/prepare_linux/utils/checking/check_ssh.sh
 
 function prepare_ubuntu {
   yes | sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -cs)-backports main restricted universe multiverse "
