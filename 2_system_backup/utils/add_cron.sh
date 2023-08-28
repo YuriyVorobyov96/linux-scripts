@@ -1,14 +1,13 @@
 #!/bin/bash
 
 function add_cronjob {
-  cron="30 18 * * 5 ~/scripts/system_backup/backup.sh"
+  cron="30 18 * * 5 /scripts/system_backup/backup.sh"
 
-  if ! crontab -l | fgrep -q "$cron" ;
+  if ! sudo crontab -l | fgrep -q "$cron" ;
     then
-      crontab -l > allcrons
+      sudo crontab -l > allcrons
       echo "$cron" >> allcrons
-      crontab allcrons
+      sudo crontab allcrons
       rm allcrons
-      
   fi
 }

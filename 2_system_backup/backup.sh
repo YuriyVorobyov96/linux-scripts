@@ -1,11 +1,11 @@
 #!/bin/bash
 
-source ./utils/add_backup_dir.sh
-source ./utils/move_files.sh
-source ./utils/first_backup.sh
-source ./utils/additional_backup.sh
-source ./utils/add_cron.sh
-source ./constants/dirs_paths.sh
+source /scripts/system_backup/utils/add_backup_dir.sh
+source /scripts/system_backup/utils/move_files.sh
+source /scripts/system_backup/utils/first_backup.sh
+source /scripts/system_backup/utils/additional_backup.sh
+source /scripts/system_backup/utils/add_cron.sh
+source /scripts/system_backup/constants/dirs_paths.sh
 
 if [ ! -d "${ARCHIVE_PATH}" ];
   then
