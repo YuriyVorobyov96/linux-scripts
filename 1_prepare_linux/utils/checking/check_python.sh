@@ -1,7 +1,5 @@
 #!/bin/bash
 
-DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-
 source /scripts/prepare_linux/constants/colors.sh
 
 function check_is_python_running {
