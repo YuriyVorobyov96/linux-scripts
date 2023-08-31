@@ -1,5 +1,5 @@
 # System monitor
-Monitor SSH, FTP and RDP (XRDP) and send mails to `root` user every dat at 8AM
+Monitor SSH, FTP and RDP (XRDP) and send mails to `root` user every day at 8AM
 
 **!IMPORTANT! Need sudo privileges**
 
