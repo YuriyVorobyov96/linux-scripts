@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function add_cronjob {
-  CRON="30 18 * * 5 /scripts/system_backup/backup.sh"
+  CRON="30 18 * * 5 bash /scripts/system_backup/backup.sh"
 
   if ! sudo crontab -l | fgrep -q "$CRON" ;
     then
