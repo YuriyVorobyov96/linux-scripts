@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function add_cronjob {
-  CRON="30 18 * * 5 bash /scripts/monitor_system/utils/logwatch.sh"
+  CRON="0 8 * * * bash /scripts/monitor_system/utils/logwatch.sh"
 
   if ! sudo crontab -l | fgrep -q "$CRON" ;
     then
