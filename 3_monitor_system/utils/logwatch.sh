@@ -1,0 +1,1 @@
+sudo logwatch --detail high --service sshd --service vsftpd --mailto root
