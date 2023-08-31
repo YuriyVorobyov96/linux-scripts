@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cat /var/log/xrdp.log
+cat /var/log/xrdp-sesman.log
